@@ -56,8 +56,10 @@ This is a demo of the final result.
 
 https://user-images.githubusercontent.com/88981092/181009117-963f96fb-b093-48e4-b3e4-dded8c0c6ba1.mp4
 
-This is to show that the client interface is responsive .
+This is to show that the client interface is responsive.
+
 https://user-images.githubusercontent.com/88981092/181008683-d791d194-fb39-4da3-b968-99ee2bcb979d.mp4
 
 And finally, a close up on the web-interface from mobile.
+
 https://user-images.githubusercontent.com/88981092/181011890-6bae343d-cd67-4a6c-982b-f4af08a033cb.mp4
