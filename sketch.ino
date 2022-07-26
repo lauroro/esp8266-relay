@@ -19,8 +19,8 @@
 
 
 //Wifi params
-const char* ssid = "TP-LINK_81CC";
-const char* password = "67652594";
+const char* ssid = "your-ssid-here";
+const char* password = "your-passwd-here";
 
 
 AsyncWebServer server(80);
