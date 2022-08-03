@@ -3,7 +3,9 @@
 /*
 * <ESP-IP-ADDRESS>[/?name=name-value&relays=relays-value]
 *
-* relays-value : all || r0 || r1 || r2 || r3 || anything else -> default 
+* // Fields
+* name-value : everything
+* relays-value : all || r0 || r1 || r2 || r3 || everything else -> default 
 */
 
 // Defaults
