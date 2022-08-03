@@ -65,7 +65,7 @@ And finally, a close up on the web-interface from mobile.
 https://user-images.githubusercontent.com/88981092/181011890-6bae343d-cd67-4a6c-982b-f4af08a033cb.mp4
 
 ## Single relay mode and beyond
-The most recent feature adds the possibility to tweak the UI a little bit, if needed. In particular, it's possible to limit the view to only one relay toggle button. It's also possible to specify the text content of the page header (this is now possible also in the all relays view). This is handled is the URL.
+The most recent feature adds the possibility to tweak the UI a little bit, if needed. In particular, it's possible to limit the view to only one relay toggle button. It's also possible to specify the text content of the page header (this is now possible also in the all relays view). This is handled via URL.
 ```
 <ESP-IP-ADDRESS>[/?name=name-value&relays=relays-value]
 
