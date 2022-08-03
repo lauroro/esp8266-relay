@@ -19,10 +19,10 @@
 
 
 //Wifi params
-const char* ssid = "your-ssid-here";
-const char* password = "your-passwd-here";
+const char* ssid = "TP-LINK_81CC";
+const char* password = "67652594";
 
-
+// Async Web Server + websocket
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
 
@@ -53,7 +53,6 @@ void resolveConnect(uint32_t clientID){
   msg += boolToState(r3);  
   ws.text(clientID, msg);
 }
-
 
 
 void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
@@ -166,7 +165,8 @@ void setup() {
   });
   server.serveStatic("/", LittleFS, "/");
 
-  server.on("/relays", HTTP_GET, [](AsyncWebServerRequest *request){
+  // HTTP Requests for relays configuration
+  server.on("/all", HTTP_GET, [](AsyncWebServerRequest *request){
     String relays = "";
     relays.reserve(2000);
     for(uint8_t i=0; i < RELAYS_NUM; i++) {
@@ -178,6 +178,26 @@ void setup() {
       relays += "</button></div>";
     }
     request->send(200, "text/plain", relays);
+  });
+
+  server.on("/r0", HTTP_GET, [](AsyncWebServerRequest *request){
+    String relay = "<div class='button-div'><button class='toggle-button' id='r0'></button></div>";
+    request->send(200, "text/plain", relay);
+  });
+
+  server.on("/r1", HTTP_GET, [](AsyncWebServerRequest *request){
+    String relay = "<div class='button-div'><button class='toggle-button' id='r1'></button></div>";
+    request->send(200, "text/plain", relay);
+  });
+
+  server.on("/r2", HTTP_GET, [](AsyncWebServerRequest *request){
+    String relay = "<div class='button-div'><button class='toggle-button' id='r2'></button></div>";
+    request->send(200, "text/plain", relay);
+  });
+
+  server.on("/r3", HTTP_GET, [](AsyncWebServerRequest *request){
+    String relay = "<div class='button-div'><button class='toggle-button' id='r3'></button></div>";
+    request->send(200, "text/plain", relay);
   });
 
   // Start server
